@@ -23,12 +23,17 @@ export default function (obj) {
 
     // 发起请求
 
+    mpvue.showLoading({title:"正在加载....."})
+
     mpvue.request({
       url,
       method,
       data,
       success(info){
         resolve(info.data)
+
+        //关闭加载框
+        mpvue.hideLoading();
       }
     })
   })
