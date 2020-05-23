@@ -6,6 +6,7 @@ export default function (obj) {
   let url = obj.url || '';
   let method = obj.method || 'get';
   let data = obj.data || {};
+  let header = obj.header || {};
 
   // 配置服务器地址
   url = 'https://www.uinav.com' + url;
@@ -29,6 +30,7 @@ export default function (obj) {
       url,
       method,
       data,
+      header,
       success(info){
         resolve(info.data)
 

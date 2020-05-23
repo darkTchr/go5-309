@@ -4,14 +4,16 @@
     <!-- 焦点图 -->
     <swiper class="banner" indicator-dots indicator-color="rgba(255, 255, 255, 0.6)" indicator-active-color="#fff">
       <swiper-item :key="index" v-for="(banner,index) in bannerList">
-        <a href="/pages/goods/main">
+        <a :href="'/pages/goods/main?id='+banner.goods_id">
           <img :src="banner.image_src"/>
         </a>
       </swiper-item>
     </swiper>
     <!-- 导航条 -->
     <div class="navs">
-      <a href="" :key="index" v-for="(nav , index) in navList">
+      <!--      如果navigator 跳转的路径 是 tabBar上的页面 , 那么不可以直接实现跳转-->
+      <!--      必须指定navigator的跳转方式  switchTab-->
+      <a :open-type=" nav.open_type || 'navigate'" :href="nav.open_type ? '/pages/category/main' : '/pages/list/main?query=' + nav.name" :key="index" v-for="(nav , index) in navList">
         <img :src="nav.image_src"/>
       </a>
     </div>
@@ -22,7 +24,7 @@
           <img :src="floor.floor_title.image_src"/>
         </div>
         <div class="items">
-          <a href="" :key="key" v-for="(product , key) in floor.product_list">
+          <a :href="'/pages/list/main?query=' + product.name" :key="key" v-for="(product , key) in floor.product_list">
             <img :src="product.image_src"/>
           </a>
 
@@ -96,6 +98,7 @@
           url: '/api/public/v1/home/catitems'
         })
 
+        console.log(message,"~~~~~~~~~")
         this.navList = message
       },
       async getFloorList () {
@@ -107,34 +110,32 @@
         console.log(message)
       }
     },
-    async onPullDownRefresh(){
+    async onPullDownRefresh () {
       //刷新
 
-      await  this.getBannerList();
-      await  this.getNavList();
-      await  this.getFloorList();
-
+      await this.getBannerList()
+      await this.getNavList()
+      await this.getFloorList()
 
       //结束下拉刷新动画
-      mpvue.stopPullDownRefresh();
+      mpvue.stopPullDownRefresh()
 
     },
     onPageScroll (ev) {
       //监听页面的滚动
       // console.log(ev)
-      this.scrollTop = ev.scrollTop;
+      this.scrollTop = ev.scrollTop
     },
-    onShareAppMessage(){
+    onShareAppMessage () {
       //实现监听方法就相当于开启了 ... 的分享功能
-
 
       // 自定义分享内容
 
       return {
-        title:'这里有好货~快来看看呦~~',
-        path:'/pages/index/main',
+        title: '这里有好货~快来看看呦~~',
+        path: '/pages/index/main',
         //https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589622928380&di=9b8110978fdb36e50c799b23d8c13204&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F86%2F90%2F2856ec5a0fc84c0.jpg
-        imageUrl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589622928380&di=9b8110978fdb36e50c799b23d8c13204&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F86%2F90%2F2856ec5a0fc84c0.jpg"
+        imageUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589622928380&di=9b8110978fdb36e50c799b23d8c13204&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F86%2F90%2F2856ec5a0fc84c0.jpg'
       }
     },
 

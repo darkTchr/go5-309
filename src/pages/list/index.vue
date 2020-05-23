@@ -18,6 +18,8 @@
           <p class="price"><span>￥</span>{{goods.goods_price}}<span>.00</span></p>
         </div>
       </div>
+
+      <div class="tips" v-if="loaded && !goodsList.length">没有找到相关商品...</div>
     </scroll-view>
   </div>
 </template>
@@ -27,6 +29,8 @@
   export default {
     data(){
       return {
+        // 加载状态
+        loaded:false,
         query:'',
         goodsList:[],
         page:1,
@@ -56,6 +60,9 @@
 
         //数据库获取的分页相关
         this.total = message.total || 1;
+
+        //记录一下 loaded状态
+        this.loaded = true;
       },
       getMore (){
 

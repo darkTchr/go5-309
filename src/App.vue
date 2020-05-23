@@ -20,4 +20,11 @@
     box-sizing: border-box;
     outline: none;
   }
+
+  .tips{
+    font-size: 36rpx;
+    color: #666666;
+    text-align: center;
+    margin-top: 100rpx;
+  }
 </style>

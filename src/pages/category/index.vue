@@ -1,34 +1,39 @@
 <template>
   <div>
-    <!-- 搜索 -->
-    <search></search>
-    <!-- 分类 -->
-    <div class="category">
-      <!-- 顶级分类 -->
-      <ul class="sup">
-        <scroll-view scroll-y>
-<!--          <li class="active">大家电</li>-->
-          <li :class="{active : index == currentIndex}" @click="getChildCategories(index)" :key="index" v-for=" (category,index) in topCategories"> {{category.cat_name}}</li>
-        </scroll-view>
-      </ul>
-      <!-- 子级分类 -->
-      <div class="sub">
-        <scroll-view scroll-y>
-          <!-- 封面图 -->
-          <image src="/static/uploads/category.png" class="thumb"></image>
-          <div class="children" :key="childIndex" v-for=" (child , childIndex) in childCategories" >
-            <div class="title">{{child.cat_name}}</div>
-            <!-- 品牌 -->
-            <div class="brands">
-              <navigator :key="productIndex" v-for="(product , productIndex) in child.children" :url="'/pages/list/main?query=' + product.cat_name">
-                <image :src="product.cat_icon"></image>
-                <span>{{product.cat_name}}</span>
-              </navigator>
+    <block v-if="topCategories.length">
+      <!-- 搜索 -->
+      <search></search>
+      <!-- 分类 -->
+      <div class="category">
+        <!-- 顶级分类 -->
+        <ul class="sup">
+          <scroll-view scroll-y>
+            <!--          <li class="active">大家电</li>-->
+            <li :class="{active : index == currentIndex}" @click="getChildCategories(index)" :key="index"
+                v-for=" (category,index) in topCategories"> {{category.cat_name}}
+            </li>
+          </scroll-view>
+        </ul>
+        <!-- 子级分类 -->
+        <div class="sub">
+          <scroll-view scroll-y>
+            <!-- 封面图 -->
+            <image src="/static/uploads/category.png" class="thumb"></image>
+            <div class="children" :key="childIndex" v-for=" (child , childIndex) in childCategories">
+              <div class="title">{{child.cat_name}}</div>
+              <!-- 品牌 -->
+              <div class="brands">
+                <navigator :key="productIndex" v-for="(product , productIndex) in child.children"
+                           :url="'/pages/list/main?query=' + product.cat_name">
+                  <image :src="product.cat_icon"></image>
+                  <span>{{product.cat_name}}</span>
+                </navigator>
+              </div>
             </div>
-          </div>
-        </scroll-view>
+          </scroll-view>
+        </div>
       </div>
-    </div>
+    </block>
   </div>
 </template>
 
@@ -146,15 +151,15 @@
     data () {
       return {
         topCategories: [],
-        currentIndex :0
+        currentIndex: 0
       }
     },
 
     components: {
       search
     },
-    computed:{
-      childCategories(){
+    computed: {
+      childCategories () {
         return this.topCategories.length && this.topCategories[this.currentIndex].children
       }
     },
@@ -170,20 +175,20 @@
       },
       //获取二级分类
 
-      getChildCategories(index){
+      getChildCategories (index) {
         console.log(index)
         this.currentIndex = index
       }
     },
-    mounted(){
-      this.getTopCategories();
+    mounted () {
+      this.getTopCategories()
     }
 
 
-      // ,
-      //
-      // created () {
-      //   console.log('分类也   启动了')
-      // }
-    }
+    // ,
+    //
+    // created () {
+    //   console.log('分类也   启动了')
+    // }
+  }
 </script>

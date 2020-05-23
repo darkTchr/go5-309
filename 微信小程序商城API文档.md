@@ -727,7 +727,7 @@ https://请求域名/api/public/v1/my
 ```javascript
 {
   "order_price": 0.1,
-  "consignee_addr": "大连市市西城区",
+  "consignee_addr": "大连市西城区",
   "order_detail":
     "[{\"goods_id\":55578,\"goods_name\":\"初语2017秋装新款潮牌女装加绒宽松BF风慵懒卫衣女套头连帽上衣\",\"goods_price\":279,\"goods_small_logo\":\"http://image2.suning.cn/uimg/b2c/newcatentries/0070067836-000000000690453616_2_400x400.jpg\",\"counts\":1,\"selectStatus\":true}]",
   "goods": [

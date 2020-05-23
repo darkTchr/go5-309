@@ -1,45 +1,125 @@
 <template>
   <div class="wrapper">
-    <!-- 商品图片 -->
-    <swiper class="pics" indicator-dots indicator-color="rgba(255, 255, 255, 0.6)" indicator-active-color="#fff">
-      <swiper-item>
-        <image src="/static/uploads/detail_1.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image src="/static/uploads/detail_2.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image src="/static/uploads/detail_3.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image src="/static/uploads/detail_4.jpg"></image>
-      </swiper-item>
-      <swiper-item>
-        <image src="/static/uploads/detail_5.jpg"></image>
-      </swiper-item>
-    </swiper>
-    <!-- 基本信息 -->
-    <div class="meta">
-      <p class="price">￥199</p>
-      <p class="name">初语秋冬新款毛衣女 套头宽松针织衫简约插肩袖上衣</p>
-      <p class="shipment">快递: 免运费</p>
-      <span class="collect">收藏</span>
-    </div>
-    <!-- 商品详情 -->
-    <div class="detail">
-      <rich-text>
-        <div class="lazyimg"><p> </p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/507961877110504129285860_x.jpg?from=mobile&amp;format=80q.webp" alt="" usemap="#Map333323" border="0" src="//image.suning.cn/uimg/sop/commodity/507961877110504129285860_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"> </p><div moduleid="R6152003_3" modulename="商品详情"><p><img id="desc-module-1" data-src="//image.suning.cn/uimg/sop/richtext/510652317146600143013180.gif?from=mobile" alt="" src="//image.suning.cn/uimg/sop/richtext/510652317146600143013180.gif?from=mobile" width="100%" height="auto"></p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/800090713589949918474800_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/800090713589949918474800_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p> <p> </p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/484194456593253256362300_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/484194456593253256362300_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/917532525117700908921880_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/917532525117700908921880_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/302900934177039263659570_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/302900934177039263659570_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p> <p><img id="desc-module-2" data-src="//image.suning.cn/uimg/sop/richtext/109414838517558566364875.gif?from=mobile" alt="" src="//image.suning.cn/uimg/sop/richtext/109414838517558566364875.gif?from=mobile" width="100%" height="auto"></p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/107130518751648937056330_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/107130518751648937056330_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p> <p><img id="desc-module-3" data-src="//image.suning.cn/uimg/sop/richtext/113020254580382243198480.gif?from=mobile" alt="" src="//image.suning.cn/uimg/sop/richtext/113020254580382243198480.gif?from=mobile" width="100%" height="auto"></p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/176115361038262943564920_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/176115361038262943564920_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/207298935318803752635120_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/207298935318803752635120_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/201743685397849541267870_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/201743685397849541267870_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p> <p><img id="desc-module-4" data-src="//image.suning.cn/uimg/sop/richtext/103750637198438294119680.gif?from=mobile" alt="" src="//image.suning.cn/uimg/sop/richtext/103750637198438294119680.gif?from=mobile" width="100%" height="auto"></p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/695503551834142297742000_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/695503551834142297742000_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/774079549173170209276170_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/774079549173170209276170_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/287514515144034202873930_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/287514515144034202873930_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/605608755139044222153770_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/605608755139044222153770_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/108351023856790531230700_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/108351023856790531230700_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/798315594942455774824100_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/798315594942455774824100_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/190508963016833795885286_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/190508963016833795885286_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/141588120645544589255060_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/141588120645544589255060_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/148659357147759226284400_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/148659357147759226284400_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/667489405172933492664530_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/667489405172933492664530_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/183569935914284490686131_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/183569935914284490686131_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/197955589413063521534975_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/197955589413063521534975_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/167765858217973754085740_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/167765858217973754085740_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/121921866788809612071000_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/121921866788809612071000_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/831891756225862745125000_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/831891756225862745125000_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><a target="_blank"><img data-src="//image.suning.cn/uimg/sop/commodity/698672542214252790623880_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/698672542214252790623880_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></a><img data-src="//image.suning.cn/uimg/sop/commodity/849159706115371196385800_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/849159706115371196385800_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/145230333812937776719769_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/145230333812937776719769_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/559469845644541304879300_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/559469845644541304879300_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/226148250180264536311460_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/226148250180264536311460_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/107981854127101913069810_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/107981854127101913069810_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><a target="_blank"><img data-src="//image.suning.cn/uimg/sop/commodity/218666340781650096427000_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/218666340781650096427000_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></a><img data-src="//image.suning.cn/uimg/sop/commodity/693847083144359223266730_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/693847083144359223266730_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/942977316970082932244900_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/942977316970082932244900_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/101064701011648973211861_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/101064701011648973211861_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/790082945619599091929500_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/790082945619599091929500_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/244465111275768628810400_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/244465111275768628810400_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p> <p><img id="desc-module-5" data-src="//image.suning.cn/uimg/sop/richtext/104426825998253418575800.gif?from=mobile" alt="" src="//image.suning.cn/uimg/sop/richtext/104426825998253418575800.gif?from=mobile" width="100%" height="auto"></p> <p><img data-src="//image.suning.cn/uimg/sop/commodity/135049999116123765389052_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/135049999116123765389052_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/107873143612991783842781_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/107873143612991783842781_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/193286469776891569790880_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/193286469776891569790880_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/365997967845884139674200_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/365997967845884139674200_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/107276298913590478151313_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/107276298913590478151313_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/207683616783055999517870_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/207683616783055999517870_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/134292594563010251995160_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/134292594563010251995160_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"><img data-src="//image.suning.cn/uimg/sop/commodity/965752296860427109758100_x.jpg?from=mobile&amp;format=80q.webp" alt="" align="absmiddle" src="//image.suning.cn/uimg/sop/commodity/965752296860427109758100_x.jpg?from=mobile&format=80q.webp" width="100%" height="auto"></p></div><div moduleid="R6152003_4" modulename="商品尺码表"><p>   </p></div><div moduleid="R6152003_5" modulename="模特效果"><p>   </p></div></div>
-      </rich-text>
-    </div>
-    <!-- 操作 -->
-    <div class="action">
-      <button>联系客服</button>
-      <span class="cart">购物车</span>
-      <span class="add">加入购物车</span>
-      <span class="buy">立即购买</span>
-    </div>
+    <block v-if="goods">
+      <!-- 商品图片 -->
+      <swiper class="pics" indicator-dots indicator-color="rgba(255, 255, 255, 0.6)" indicator-active-color="#fff">
+        <swiper-item :key="index" v-for="(pic,index) in goods.pics">
+          <image :src="pic.pics_big"></image>
+        </swiper-item>
+
+      </swiper>
+      <!-- 基本信息 -->
+      <div class="meta">
+        <p class="price">￥{{goods.goods_price}}</p>
+        <p class="name">{{goods.goods_name}}{{goods.goods_name}}</p>
+        <p class="shipment">快递: 免运费</p>
+        <span class="collect">收藏</span>
+      </div>
+      <!-- 商品详情 -->
+      <div class="detail">
+        <!--      v-html-->
+        <div v-html="goods.goods_introduce"></div>
+        <!--      <rich-text :nodes="goods.goods_introduce"></rich-text>-->
+      </div>
+      <!-- 操作 -->
+      <div class="action">
+        <button open-type="contact">联系客服</button>
+        <span class="cart" @click="goCart">购物车</span>
+        <span class="add" @click="addCart">加入购物车</span>
+        <span class="buy">立即购买</span>
+      </div>
+    </block>
   </div>
 </template>
+
+<script>
+
+  import request from '@/utils/request'
+
+  export default {
+    data () {
+      return {
+        goods_id: 0,
+        goods: null,
+        carts: []
+      }
+    },
+    methods: {
+
+      addCart () {
+        //  购物车正常情形是需要通过请求 将商品信息存入到数据库
+
+        let {
+          goods_id,
+          goods_name,
+          goods_price,
+          goods_small_logo
+        } = this.goods
+
+        // 就是购物车需要的商品信息
+
+        //创建一个状态 flag  判断是否有相同id商品
+        let flag = false
+        //遍历数组forEach
+        this.carts.forEach((val) => {
+          if (val.goods_id == goods_id) {
+            //  +1
+            val.goods_number += 1
+            flag = true
+            return
+          }
+        })
+
+        if (!flag) {
+          this.carts.push({
+            goods_id,
+            goods_name,
+            goods_price,
+            goods_small_logo,
+            goods_number: 1,
+            //辅助数据
+            goods_checked: true
+          })
+        }
+        mpvue.setStorageSync('carts', this.carts)
+
+        //提示信息
+        mpvue.showToast({
+          title: '添加成功!'
+        })
+
+      },
+
+      goCart () {
+        //switchTab
+        mpvue.switchTab({
+          url: '/pages/cart/main'
+        })
+      },
+      async getGoodDetail () {
+        const { message } = await request({
+          url: '/api/public/v1/goods/detail',
+          data: {
+            goods_id: this.goods_id
+          }
+        })
+
+        console.log(message, '@@@@@@@')
+
+        this.goods = message
+      }
+    },
+
+    onLoad (params) {
+      //goods_id
+      console.log(params)
+      this.goods_id = params.id
+
+      // API 获取商品详情
+      this.getGoodDetail()
+    }
+  }
+</script>
 
 <style scoped lang="less">
 
@@ -51,7 +131,7 @@
   .pics {
     height: 720rpx;
   }
-  
+
   .meta {
     height: 270rpx;
     line-height: 1;
@@ -70,6 +150,12 @@
       color: #333;
       line-height: 1.4;
       font-size: 33rpx;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .shipment {
@@ -148,14 +234,10 @@
       color: #989898;
       font-size: 24rpx;
       box-sizing: border-box;
-      padding-top: 56rpx;                         
+      padding-top: 56rpx;
     }
   }
 
 </style>
 
-<script>
-  export default {
 
-  }
-</script>

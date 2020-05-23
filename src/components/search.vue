@@ -3,7 +3,7 @@
   <div class="search" :class="{focused: focused}">
     <!-- 搜索框 -->
     <div class="input-wrap" @click="goSearch">
-      <input type="text" :placeholder="placeholder">
+      <input type="text" @confirm="goList" v-model="keywords" @input="query" :placeholder="placeholder">
       <span class="cancle" @click.stop="cancleSearch">取消</span>
     </div>
     <!-- 搜索结果 -->
@@ -19,64 +19,74 @@
         <navigator url="">锤子</navigator>
       </div>
       <!-- 结果 -->
-      <scroll-view scroll-y class="result">
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
-        <navigator url="">小米</navigator>
+      <scroll-view scroll-y class="result" v-show="list.length">
+        <navigator :key="index" v-for="(item,index) in list" :url="'/pages/goods/main?id=' + item.goods_id">{{item.goods_name}}</navigator>
       </scroll-view>
     </div>
   </div>
 </template>
 <script>
 
+  import request from '@/utils/request'
+
   export default {
-    data() {
+    data () {
       return {
         focused: false,
-        placeholder: ''
+        placeholder: '',
+        //根据关键字搜索的建议列表
+        list: [],
+        //搜索关键字
+        keywords: ''
       }
     },
     methods: {
-      goSearch(ev) {
-        this.focused = true;
-        this.placeholder = '请输入您要搜索的内容';
+      //监听用户输入
+      async query () {
+        //验证数据是否合法
+      if(this.keywords == '')  return this.list = [] ;
+
+        const { message } = await request({
+          url:"/api/public/v1/goods/qsearch",
+          data:{
+            query:this.keywords
+          }
+        });
+        // console.log(message,'----------------');
+
+        this.list = message;
+      },
+      //监听用户确认操作
+      goList(){
+        mpvue.navigateTo({
+          url:"/pages/list/main?query=" + this.keywords
+        })
+      },
+      goSearch (ev) {
+        this.focused = true
+        this.placeholder = '请输入您要搜索的内容'
 
         // 触发父组件自定义事件
         this.$emit('search', {
           pageHeight: mpvue.getSystemInfoSync().windowHeight
         })
+
+        //隐藏tabBar
+        mpvue.hideTabBar();
       },
-      cancleSearch() {
-        this.focused = false;
-        this.placeholder = '';
+      cancleSearch () {
+        this.focused = false
+        this.placeholder = ''
+        this.keywords = ''
+        this.list = []
 
         // 触发父组件自定义事件
         this.$emit('search', {
           pageHeight: 'auto'
         })
+
+        //显示tabBar
+        mpvue.showTabBar();
       }
     }
   }
